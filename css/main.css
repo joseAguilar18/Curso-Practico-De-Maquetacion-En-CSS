@@ -1,6 +1,16 @@
 body{
+    font-family: 'Roboto mono', monospace;
     margin: 0px;
-    padding: 0px;
+    padding: 0px;       
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+}
+
+.home-body{
     position: fixed;
     top: 0;
     bottom: 0;
@@ -8,10 +18,9 @@ body{
     right: 0;
 }
 
-a{
-    text-decoration: none;
-    display: inline-block;
-    color: black;
+.grid-container{
+    max-width: 980px;
+    margin: auto;
 }
 
 header{
@@ -29,11 +38,155 @@ header .header-icons-container{
 }
 
 header .header-icons-container .icons{
-    width: 500px;
+    width: 300px;
     height: auto;
     display: flex;    
     align-items: center;
     justify-content: space-around;
     justify-self: end;
+    margin-right: 50px;
 }
 
+header .icons span{
+    color: white;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 90px;    
+}
+
+nav .nav-logo-container{
+    margin-left: 50px;
+}
+
+nav .profile-link{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+
+.nav-logo-container img{
+    width: 220px;
+    margin-top: 10px;
+}
+
+nav .profile-link a{
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+}
+
+main .main-image-background{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    background: url(/assets/Cover.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.main-content{    
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content__title{
+    margin-bottom: 170px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 52px;
+    letter-spacing: 12px;
+    color: white;
+}
+
+.main-content__button{
+    display: grid;
+    place-items: center;
+    width: 100px;
+    height: 40px;
+    background-color: #47cfac;
+    border: 1px solid #b9b9b9;
+    font-size: 16px;
+    font-weight: bold;    
+}
+
+.blogs-main{
+    display: grid;    
+}
+
+.blogs-news-container{
+    background: #e0e3ea;
+    padding: 0 50px 40px;
+}
+
+.blogs-main-new{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.blogs-news-img-container{
+    grid-column: 1;
+}
+
+.blogs-news-img-container img{
+    width: 80%;
+    height: 100%;
+}
+
+.blogs-news-info-container{
+    grid-column: 2;
+}
+
+.blogs-posts-container{
+    padding: 0 50px 40px;
+}
+
+.blogs-posts-container h4{
+    border-bottom: 1px solid #cdd2da;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.blogs-button{
+    border: 1px solid #47cfac;
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+.blogs-posts-container .post-container{
+    display: inline-block;
+    padding-left: 10px;
+    max-width: 30%;
+    margin-bottom: 50px;
+}
+.blogs-posts-container .post-container p{
+    margin-bottom: 35px;
+}
+
+.blogs-posts-container .post-container img{
+    width: 100%;
+}
+
+footer{
+    width: 100%;
+    height: 80px;
+    background-color: #22272d;
+    border-top: 35px solid #47cfac;
+    text-align: center;
+}
+
+footer p{
+    color: white;
+    margin-top: 30px;
+}
